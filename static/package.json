@@ -1,0 +1,12 @@
+{
+  "name": "unomi-static",
+  "private": true,
+  "description": "Static HTML site + Vercel API for seminar form email",
+  "scripts": {
+    "build": "node -e \"process.exit(0)\""
+  },
+  "dependencies": {
+    "@vercel/functions": "^3.6.0",
+    "nodemailer": "^8.0.7"
+  }
+}

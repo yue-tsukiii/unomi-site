@@ -1,0 +1,76 @@
+
+
+		<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp2025/wp-*.php","/wp2025/wp-admin/*","./wp-content/uploads/*","./wp-content/*","./wp-content/plugins/*","./wp-content/themes/unomi/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script type="text/javascript" id="snow-monkey-forms-js-before">
+/* <![CDATA[ */
+var snowmonkeyforms = {"view_json_url":"https:\/\/www.unomi-jp.com\/wp-json\/snow-monkey-form\/v1\/view?ver=1773131377","nonce":"3ae90cf68e"}
+//# sourceURL=snow-monkey-forms-js-before
+/* ]]> */
+</script>
+<script type="text/javascript" src="/wp2025/wp-content/plugins/snow-monkey-forms/dist/js/app0800.js?ver=1771493999" async charset="UTF-8" id="snow-monkey-forms-js"></script>
+<script type="text/javascript" src="/www.google.com/recaptcha/apiaa57.js?render=6LdwoREsAAAAABPxK2K5kc1l6b4E2ZAWqCw5aGsh&amp;ver=3.0" async charset="UTF-8" id="google-recaptcha-js"></script>
+<script type="text/javascript" src="/wp2025/wp-includes/js/dist/hooks.min1fe1.js?ver=dd5603f07f9220ed27f1" async charset="UTF-8" id="wp-hooks-js"></script>
+<script type="text/javascript" src="/wp2025/wp-includes/js/dist/i18n.min1367.js?ver=c26c3dc7bed366793375" async charset="UTF-8" id="wp-i18n-js"></script>
+<script type="text/javascript" id="wp-i18n-js-after">
+/* <![CDATA[ */
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+//# sourceURL=wp-i18n-js-after
+/* ]]> */
+</script>
+<script type="text/javascript" src="/wp2025/wp-content/plugins/snow-monkey-forms/dist/js/recaptcha0800.js?ver=1771493999" async charset="UTF-8" id="snow-monkey-forms@recaptcha-js"></script>
+<script type="text/javascript" id="snow-monkey-forms@recaptcha-js-after">
+/* <![CDATA[ */
+var snowmonkeyforms_recaptcha = {"siteKey":"6LdwoREsAAAAABPxK2K5kc1l6b4E2ZAWqCw5aGsh"}
+//# sourceURL=snow-monkey-forms%40recaptcha-js-after
+/* ]]> */
+</script>
+		<script>
+		(function () {
+			function fitFvCopy() {
+				var root = document.getElementById("fvCopyText");
+				if (!root) return;
+				var lines = root.querySelectorAll(".fv-copy-line");
+				if (!lines.length) return;
+				var minPx = 10;
+				var maxPx = 65;
+				var width = root.clientWidth;
+				if (width <= 0) return;
+				var low = minPx;
+				var high = maxPx;
+				var best = minPx;
+				for (var i = 0; i < 22; i++) {
+					var mid = (low + high) / 2;
+					root.style.fontSize = mid + "px";
+					var maxW = 0;
+					for (var j = 0; j < lines.length; j++) {
+						var w = lines[j].scrollWidth;
+						if (w > maxW) maxW = w;
+					}
+					if (maxW <= width + 0.5) {
+						best = mid;
+						low = mid;
+					} else {
+						high = mid;
+					}
+				}
+				root.style.fontSize = best + "px";
+			}
+			function initFvCopyFit() {
+				fitFvCopy();
+				var root = document.getElementById("fvCopyText");
+				if (root && window.ResizeObserver) {
+					new ResizeObserver(fitFvCopy).observe(root);
+				}
+			}
+			if (document.readyState === "loading") {
+				document.addEventListener("DOMContentLoaded", initFvCopyFit);
+			} else {
+				initFvCopyFit();
+			}
+		})();
+		</script>
+		<script type="module" src="/wp2025/wp-content/themes/unomi/assets/js/index0f82.js?t2" defer></script>
+		<script type="module" src="/wp2025/wp-content/themes/unomi/assets/js/vendor.js" defer></script>
+		

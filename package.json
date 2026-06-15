@@ -1,0 +1,13 @@
+{
+  "name": "unomi-site",
+  "version": "2.0.0",
+  "description": "UNOMI corporate site — Eleventy source (maintainable, agent-friendly)",
+  "private": true,
+  "scripts": {
+    "build": "eleventy",
+    "dev": "eleventy --serve"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}

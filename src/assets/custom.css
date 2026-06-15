@@ -1,0 +1,21 @@
+/* UNOMI custom styles — dock button, liquid-glass cards.
+   Single source of truth: edit here, every page updates on build. */
+
+:root{--glass-accent:#24abff;--glass-accent2:#7adcff;--glass-ease-out:cubic-bezier(.23,1,.32,1);--glass-radius:24px}
+.gnav_wrapper{z-index:1!important;opacity:0;pointer-events:none;overflow:hidden;max-height:0;transition:opacity .4s,max-height .4s}
+.gnav_wrapper>.button{display:none!important;visibility:hidden!important;opacity:0!important;pointer-events:none!important}
+.fixed_contact{display:none!important}
+.dock{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);z-index:90;display:flex;align-items:center;gap:6px;padding:6px 8px 6px 6px;border-radius:999px;background:linear-gradient(170deg,rgba(18,25,46,.72),rgba(18,25,46,.88));-webkit-backdrop-filter:blur(30px) saturate(1.7);backdrop-filter:blur(30px) saturate(1.7);border:1px solid rgba(255,255,255,.14);box-shadow:0 14px 40px -16px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,255,255,.12);font-family:'Unbounded',sans-serif;font-weight:400;letter-spacing:.08em;transition:transform .5s var(--glass-ease-out),opacity .5s}
+.dock.hide{transform:translateX(-50%) translateY(100px);opacity:0}
+.dock .brand{font-size:14px;font-weight:700;color:rgba(255,255,255,.95);letter-spacing:.06em;padding:0 10px 0 18px}
+.dock .brand a{color:rgba(255,255,255,.95);text-decoration:none}
+.dock .brand b{color:var(--glass-accent)}
+.dock a.contact{padding:11px 24px;border-radius:999px;color:#fff;font-size:12.5px;text-decoration:none;background:linear-gradient(118deg,rgba(36,171,255,.95),rgba(46,129,168,.9));box-shadow:inset 0 1px 0 rgba(255,255,255,.35);transition:transform .35s var(--glass-ease-out),box-shadow .35s}
+.dock a.contact:hover{transform:translateY(-2px);box-shadow:0 10px 24px -8px rgba(36,171,255,.7)}
+.think_list>li{border-radius:var(--glass-radius);background:linear-gradient(160deg,rgba(255,255,255,.42),rgba(255,255,255,.14) 55%,rgba(255,255,255,.28));-webkit-backdrop-filter:blur(18px) saturate(1.5);backdrop-filter:blur(18px) saturate(1.5);border:1px solid rgba(255,255,255,.55);box-shadow:0 14px 40px -18px rgba(19,19,19,.12),inset 0 1px 1px rgba(255,255,255,.8),inset 0 -1px 1px rgba(255,255,255,.2);overflow:hidden;transition:transform .55s var(--glass-ease-out),box-shadow .55s var(--glass-ease-out),border-color .4s}
+.think_list>li:hover{transform:translateY(-4px);border-color:rgba(36,171,255,.5);box-shadow:0 24px 50px -20px rgba(36,171,255,.25),inset 0 1px 1px rgba(255,255,255,.8)}
+.-topic_list .-topic_item{border-radius:18px;background:linear-gradient(160deg,rgba(255,255,255,.38),rgba(255,255,255,.12) 55%,rgba(255,255,255,.25));-webkit-backdrop-filter:blur(18px) saturate(1.5);backdrop-filter:blur(18px) saturate(1.5);border:1px solid rgba(255,255,255,.5);box-shadow:0 10px 30px -15px rgba(19,19,19,.1),inset 0 1px 1px rgba(255,255,255,.7);overflow:hidden;transition:transform .55s var(--glass-ease-out),box-shadow .55s var(--glass-ease-out),border-color .4s;margin-bottom:12px}
+.-topic_list .-topic_item:hover{transform:translateY(-4px);border-color:rgba(36,171,255,.5);box-shadow:0 24px 50px -20px rgba(36,171,255,.25),inset 0 1px 1px rgba(255,255,255,.8)}
+
+/* Show gnav footer on auto_open */
+.gnav_wrapper.auto_open { opacity:1!important; pointer-events:auto!important; max-height:2000px!important; overflow:visible!important; }

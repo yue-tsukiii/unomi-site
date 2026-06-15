@@ -1,0 +1,13 @@
+<div class="dock" id="dock">
+  <span class="brand"><a href="/" data-barba-prevent="">UNO<b>MI</b></a></span>
+  <a class="contact" href="/form/">CONTACT</a>
+</div>
+<script>
+(function(){
+  'use strict';
+  
+  
+  var dock=document.getElementById('dock'),footer=document.querySelector('footer');
+  if(dock&&footer){new IntersectionObserver(function(es){es.forEach(function(e){dock.classList.toggle('hide',e.isIntersecting);});},{threshold:.25}).observe(footer);}
+})();
+</script>

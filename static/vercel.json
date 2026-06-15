@@ -1,0 +1,18 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "outputDirectory": ".",
+  "redirects": [
+    {
+      "source": "/form",
+      "destination": "/form/",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/images/:path*",
+      "destination": "https://ec-force.com/images/:path*"
+    }
+  ]
+}
