@@ -26,7 +26,8 @@ footer{height:auto!important}
 .-topic_list .-topic_item>a{padding-left:24px!important;padding-right:24px!important}
 @media (max-width:768px){
   .-topic_list .-topic_item>a{padding-top:22px!important;padding-bottom:22px!important}
-  .-topic_list .-topic_item .link{right:24px!important}
+  /* arrow is absolutely positioned; keep it clearly off the right edge */
+  .-topic_list .-topic_item .link{right:40px!important}
 }
 
 /* Footer is now always in-flow (see above); keep auto_open fully expanded too */
