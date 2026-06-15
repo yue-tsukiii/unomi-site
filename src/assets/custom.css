@@ -24,11 +24,9 @@ footer{height:auto!important}
 /* TOPICS cards: the theme's list rows have 0 side padding, so content sits flush
    against the glass-card edges (most noticeable on mobile). Add inner padding. */
 .-topic_list .-topic_item>a{padding-left:24px!important;padding-right:24px!important}
-@media (max-width:768px){
-  .-topic_list .-topic_item>a{padding-top:22px!important;padding-bottom:22px!important}
-  /* arrow is absolutely positioned; keep it clearly off the right edge */
-  .-topic_list .-topic_item .link{right:40px!important}
-}
+.mb .-topic_list .-topic_item>a{padding-top:22px!important;padding-bottom:22px!important}
+/* arrow is absolutely positioned; keep it clearly off the right edge */
+.mb .-topic_list .-topic_item .link{right:40px!important}
 
 /* Footer is now always in-flow (see above); keep auto_open fully expanded too */
 .gnav_wrapper.auto_open { position:static!important; clip-path:none!important; opacity:1!important; pointer-events:auto!important; max-height:none!important; overflow:visible!important; }
@@ -38,14 +36,12 @@ footer{height:auto!important}
    to the bottom (margin-top:auto), leaving a big gap so image and text don't line
    up. Render them as a normal block: heading on top, then image (left) and
    description (right) side-by-side with their tops aligned. */
-@media (min-width:769px){
-  .service_page .service_list li{position:static!important;height:auto!important;filter:none!important}
-  .service_page .service_list li a{align-items:start!important;align-content:start!important;row-gap:24px;padding-block:48px!important;height:auto!important;clip-path:none!important}
-  .service_page .service_list li a>.heading{grid-column:1/-1!important;grid-row:1!important}
-  .service_page .service_list li .photo{grid-column:1/span 5!important;grid-row:2!important;margin:0!important;align-self:start!important}
-  .service_page .service_list li .photo img{transform:none!important;border-radius:8px}
-  .service_page .service_list li .content{grid-row:2!important;grid-column:7/span 6!important;margin:0!important;align-self:start!important}
-}
+.dt .service_page .service_list li{position:static!important;height:auto!important;filter:none!important}
+.dt .service_page .service_list li a{align-items:start!important;align-content:start!important;row-gap:24px;padding-block:48px!important;height:auto!important;clip-path:none!important}
+.dt .service_page .service_list li a>.heading{grid-column:1/-1!important;grid-row:1!important}
+.dt .service_page .service_list li .photo{grid-column:1/span 5!important;grid-row:2!important;margin:0!important;align-self:start!important}
+.dt .service_page .service_list li .photo img{transform:none!important;border-radius:8px}
+.dt .service_page .service_list li .content{grid-row:2!important;grid-column:7/span 6!important;margin:0!important;align-self:start!important}
 
 /* WE WORK list (about): these rows are restyled as glass cards (.think_list>li
    above), but the theme's flat-list borders + zero gap make them collide into a
@@ -55,9 +51,58 @@ footer{height:auto!important}
 .about_page .think__main .think_list li{border:none!important}
 .about_page .think__main .think_list li .thumb{border-radius:12px;overflow:hidden}
 .about_page .think__main .think_list li .thumb img{width:100%;height:100%;object-fit:cover;display:block}
-@media (min-width:769px){
-  .about_page .think__main .think_list{display:flex;flex-direction:column;gap:14px}
-  .about_page .think__main .think_list li a{grid-template-columns:80px 188px 1fr max-content;align-items:center;padding:22px 28px;column-gap:12px}
-  .about_page .think__main .think_list li .thumb{width:188px;aspect-ratio:188/120}
-  .about_page .think__main .think_list li .num{place-content:center}
+.about_page .think__main .think_list{display:flex;flex-direction:column;gap:16px}
+/* NOTE: this theme switches layouts with the body .dt (desktop) / .mb (mobile)
+   classes, NOT viewport width — using @media here created a conflict band where
+   the theme's 2-col grid kept its column sizes while our fixed-width thumbnail
+   overflowed onto the text (image/text overlap). Scope to .dt / .mb to match. */
+/* Desktop: an editorial 2-column card — a large image on the left, and a single
+   grouped content block on the right (WORK label → title → description → MORE),
+   vertically centered. Fixes the old layout where "WORK 0X" was stranded far
+   left and the text column was cramped. */
+.dt .about_page .think__main .think_list li a{
+  grid-template-columns:minmax(0,44%) minmax(0,1fr);
+  grid-template-rows:auto auto auto;
+  column-gap:52px;align-content:center;align-items:start;
+  padding:34px 44px;
 }
+.dt .about_page .think__main .think_list li .thumb{grid-column:1;grid-row:1/span 3;align-self:center;width:100%;aspect-ratio:3/2}
+.dt .about_page .think__main .think_list li .num{grid-column:2;grid-row:1;align-self:end;width:auto!important;justify-items:start!important;text-align:left!important;margin-bottom:10px;white-space:nowrap}
+.dt .about_page .think__main .think_list li .num br{display:none!important}
+.dt .about_page .think__main .think_list li .text{grid-column:2;grid-row:2}
+.dt .about_page .think__main .think_list li .text .description{margin-top:12px}
+.dt .about_page .think__main .think_list li .link{grid-column:2;grid-row:3;align-self:start;justify-content:flex-start!important;margin-top:20px}
+/* Mobile (.mb): the theme's 2-column grid leaves "WORK 0X" stranded on its own
+   row and the thumbnail floating in a half-empty column. Re-flow as a clean
+   stacked card: full-width cover image on top, then label → title → desc → MORE. */
+.mb .about_page .think__main .think_list li a{display:flex!important;flex-direction:column;align-items:stretch;gap:14px;padding:18px!important}
+.mb .about_page .think__main .think_list li .thumb{order:1;width:100%!important;aspect-ratio:16/10}
+.mb .about_page .think__main .think_list li .num{order:2;margin:0;width:100%!important;justify-items:start!important;text-align:left!important}
+.mb .about_page .think__main .think_list li .text{order:3;padding:0!important}
+.mb .about_page .think__main .think_list li .text .description{padding-left:0!important}
+.mb .about_page .think__main .think_list li .link{order:4;position:static!important;width:100%;display:flex!important;justify-content:flex-end!important}
+
+/* ===== WE WORK card — UI-kit polish (surface, hover accent, image zoom, arrow) =====
+   Tasteful lift that stays within the existing accent (--glass-accent #24abff)
+   and glass aesthetic; applies to both breakpoints. */
+.about_page .think__main .think_list li{
+  background:linear-gradient(158deg,rgba(255,255,255,.78),rgba(255,255,255,.46));
+  border:1px solid rgba(18,25,46,.07)!important;
+  box-shadow:0 8px 26px -16px rgba(18,25,46,.22),inset 0 1px 0 rgba(255,255,255,.7);
+  transition:transform .5s var(--glass-ease-out),box-shadow .5s var(--glass-ease-out),border-color .4s;
+}
+.about_page .think__main .think_list li:hover{
+  transform:translateY(-3px);
+  border-color:rgba(36,171,255,.4)!important;
+  box-shadow:0 22px 44px -22px rgba(36,171,255,.42),inset 0 1px 0 rgba(255,255,255,.85);
+}
+/* Thumbnail: gentle zoom on hover */
+.about_page .think__main .think_list li .thumb{box-shadow:inset 0 0 0 1px rgba(18,25,46,.05)}
+.about_page .think__main .think_list li .thumb img{transition:transform .6s var(--glass-ease-out)}
+.about_page .think__main .think_list li a:hover .thumb img{transform:scale(1.06)}
+/* WORK 0X label: refined accent */
+.about_page .think__main .think_list li .num{color:var(--glass-accent);font-weight:500;letter-spacing:.14em}
+/* MORE: label brightens + arrow slides on hover */
+.about_page .think__main .think_list li .link .label{transition:color .3s}
+.about_page .think__main .think_list li .link .-arrow1{transition:transform .35s var(--glass-ease-out)}
+.about_page .think__main .think_list li a:hover .link .-arrow1{transform:translateX(7px)}
