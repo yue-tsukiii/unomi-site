@@ -24,3 +24,17 @@ footer{height:auto!important}
 
 /* Footer is now always in-flow (see above); keep auto_open fully expanded too */
 .gnav_wrapper.auto_open { position:static!important; clip-path:none!important; opacity:1!important; pointer-events:auto!important; max-height:none!important; overflow:visible!important; }
+
+/* SERVICE detail cards (PC): the theme makes each item a position:sticky 100vh
+   section where the heading + description sit at the top but the image is pushed
+   to the bottom (margin-top:auto), leaving a big gap so image and text don't line
+   up. Render them as a normal block: heading on top, then image (left) and
+   description (right) side-by-side with their tops aligned. */
+@media (min-width:769px){
+  .service_page .service_list li{position:static!important;height:auto!important;filter:none!important}
+  .service_page .service_list li a{align-items:start!important;align-content:start!important;row-gap:24px;padding-block:48px!important;height:auto!important;clip-path:none!important}
+  .service_page .service_list li a>.heading{grid-column:1/-1!important;grid-row:1!important}
+  .service_page .service_list li .photo{grid-column:1/span 5!important;grid-row:2!important;margin:0!important;align-self:start!important}
+  .service_page .service_list li .photo img{transform:none!important;border-radius:8px}
+  .service_page .service_list li .content{grid-row:2!important;grid-column:7/span 6!important;margin:0!important;align-self:start!important}
+}
