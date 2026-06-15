@@ -1,1 +1,61 @@
-{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","@id":"https://www.unomi-jp.com/topics/tiktok-shop-accelerate-business.html#breadcrumblist","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.unomi-jp.com/"},{"@type":"ListItem","position":2,"name":"TOPICS","item":"https://www.unomi-jp.com/topics/"},{"@type":"ListItem","position":3,"name":"【最新版】TikTokショップであなたのビジネスを加速させる方法"}]},{"@type":"Article","headline":"【最新版】TikTokショップであなたのビジネスを加速させる方法","datePublished":"2025-06-21","inLanguage":"ja"}]}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.unomi-jp.com/topics/tiktok-shop-accelerate-business.html#breadcrumblist",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.unomi-jp.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "TOPICS",
+          "item": "https://www.unomi-jp.com/topics/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "【最新版】TikTokショップであなたのビジネスを加速させる方法"
+        }
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "【最新版】TikTokショップであなたのビジネスを加速させる方法",
+      "datePublished": "2025-06-21",
+      "inLanguage": "ja",
+      "@id": "https://www.unomi-jp.com/topics/tiktok-shop-accelerate-business.html#article",
+      "dateModified": "2025-06-21",
+      "description": "TikTokショップを活用してビジネスを加速させる最新の方法を、立ち上げから運用改善まで実践的に解説します。",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://www.unomi-jp.com/topics/3.png",
+        "width": 450,
+        "height": 300
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "株式会社UNOMI",
+        "@id": "https://www.unomi-jp.com/#organization"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "株式会社UNOMI",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.unomi-jp.com/logo-unomi.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.unomi-jp.com/topics/tiktok-shop-accelerate-business.html"
+      },
+      "articleSection": "TikTok / SNSマーケティング"
+    }
+  ]
+}

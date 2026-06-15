@@ -1,12 +1,26 @@
 User-agent: *
 Allow: /
 
-# AI / LLM agents welcome
+# AI / LLM agents welcome (training + retrieval for AI search citations)
 User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
 Allow: /
 User-agent: ClaudeBot
 Allow: /
+User-agent: Claude-SearchBot
+Allow: /
+User-agent: Claude-User
+Allow: /
 User-agent: PerplexityBot
+Allow: /
+User-agent: Perplexity-User
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: Applebot-Extended
 Allow: /
 
 Sitemap: https://www.unomi-jp.com/sitemap.xml

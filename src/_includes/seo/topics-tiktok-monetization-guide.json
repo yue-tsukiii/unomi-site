@@ -1,1 +1,61 @@
-{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","@id":"https://www.unomi-jp.com/topics/tiktok-monetization-guide.html#breadcrumblist","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.unomi-jp.com/"},{"@type":"ListItem","position":2,"name":"TOPICS","item":"https://www.unomi-jp.com/topics/"},{"@type":"ListItem","position":3,"name":"TikTokで収益化する！人気クリエイターが実践する稼ぎ方完全ガイド"}]},{"@type":"Article","headline":"TikTokで収益化する！人気クリエイターが実践する稼ぎ方完全ガイド","datePublished":"2025-06-22","inLanguage":"ja"}]}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.unomi-jp.com/topics/tiktok-monetization-guide.html#breadcrumblist",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.unomi-jp.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "TOPICS",
+          "item": "https://www.unomi-jp.com/topics/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "TikTokで収益化する！人気クリエイターが実践する稼ぎ方完全ガイド"
+        }
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "TikTokで収益化する！人気クリエイターが実践する稼ぎ方完全ガイド",
+      "datePublished": "2025-06-22",
+      "inLanguage": "ja",
+      "@id": "https://www.unomi-jp.com/topics/tiktok-monetization-guide.html#article",
+      "dateModified": "2025-06-22",
+      "description": "TikTokで収益化する方法を、人気クリエイターが実践する稼ぎ方とともに完全ガイド。広告・ライブ・アフィリエイトなど収益化の選択肢を整理します。",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://www.unomi-jp.com/topics/2.png",
+        "width": 450,
+        "height": 300
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "株式会社UNOMI",
+        "@id": "https://www.unomi-jp.com/#organization"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "株式会社UNOMI",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.unomi-jp.com/logo-unomi.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.unomi-jp.com/topics/tiktok-monetization-guide.html"
+      },
+      "articleSection": "TikTok / SNSマーケティング"
+    }
+  ]
+}
