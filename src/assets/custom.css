@@ -21,6 +21,13 @@ footer{height:auto!important}
 .think_list>li:hover{transform:translateY(-4px);border-color:rgba(36,171,255,.5);box-shadow:0 24px 50px -20px rgba(36,171,255,.25),inset 0 1px 1px rgba(255,255,255,.8)}
 .-topic_list .-topic_item{border-radius:18px;background:linear-gradient(160deg,rgba(255,255,255,.38),rgba(255,255,255,.12) 55%,rgba(255,255,255,.25));-webkit-backdrop-filter:blur(18px) saturate(1.5);backdrop-filter:blur(18px) saturate(1.5);border:1px solid rgba(255,255,255,.5);box-shadow:0 10px 30px -15px rgba(19,19,19,.1),inset 0 1px 1px rgba(255,255,255,.7);overflow:hidden;transition:transform .55s var(--glass-ease-out),box-shadow .55s var(--glass-ease-out),border-color .4s;margin-bottom:12px}
 .-topic_list .-topic_item:hover{transform:translateY(-4px);border-color:rgba(36,171,255,.5);box-shadow:0 24px 50px -20px rgba(36,171,255,.25),inset 0 1px 1px rgba(255,255,255,.8)}
+/* TOPICS cards: the theme's list rows have 0 side padding, so content sits flush
+   against the glass-card edges (most noticeable on mobile). Add inner padding. */
+.-topic_list .-topic_item>a{padding-left:24px!important;padding-right:24px!important}
+@media (max-width:768px){
+  .-topic_list .-topic_item>a{padding-top:22px!important;padding-bottom:22px!important}
+  .-topic_list .-topic_item .link{right:24px!important}
+}
 
 /* Footer is now always in-flow (see above); keep auto_open fully expanded too */
 .gnav_wrapper.auto_open { position:static!important; clip-path:none!important; opacity:1!important; pointer-events:auto!important; max-height:none!important; overflow:visible!important; }
